@@ -13,6 +13,8 @@ By its nature, the mod is rather intrusive. It will actively try to alter and ov
 * paper walls, wooden bars
 * wooden and steel bar doors
 * sandstone cobble varieties, with stairs/slabs/microblocks, walls, pkarcs
+* doors from moreblocks glass types (clean, iron, coal)
+* locked glass doors (regular, obsidian, iron glass)
 
 ## Borrowed items
 
