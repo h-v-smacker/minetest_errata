@@ -1,2 +1,8 @@
 default
 xpanes
+doors
+walls
+stairs
+moreblocks?
+glass_stained?
+pkarcs?
