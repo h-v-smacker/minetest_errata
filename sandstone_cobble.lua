@@ -9,7 +9,7 @@ for _,node in ipairs(cobble_table) do
 	minetest.register_node("minetest_errata:" .. node.name .. "_cobble", {
 		description = node.desc,
 		tiles = {"minetest_errata_" .. node.name .. "_cobble.png"},
-		groups = {cracky = 3},
+		groups = {cracky = 3, minetest_errata.prefix .. "sandstone" = 1},
 		is_ground_content = false,
 		sounds = default.node_sound_stone_defaults(),
 	})

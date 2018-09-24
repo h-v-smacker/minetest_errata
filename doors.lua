@@ -21,7 +21,7 @@ doors.register("door_iron_bar", {
 	sound_open = "minetest_errata_door_iron_bar_open",
 	sound_close = "minetest_errata_door_iron_bar_close",
 	sounds = metal_sounds,
-	groups = { snappy = 2, bendy = 1, cracky = 1, melty = 2, },
+	groups = { snappy = 2, bendy = 1, cracky = 1 },
 	recipe = {
 		{"xpanes:bar_flat",},
 		{"xpanes:bar_flat",},
@@ -74,7 +74,7 @@ if minetest.get_modpath("moreblocks") then
 		sound_open = "minetest_errata_door_clean_glass_open",
 		sound_close = "minetest_errata_door_clean_glass_close",
 		sounds = metal_sounds,
-		groups = { snappy = 2, bendy = 1, cracky = 1, melty = 2, },
+		groups = { snappy = 2, bendy = 1, cracky = 1 },
 		recipe = {
 			{"moreblocks:clean_glass","moreblocks:clean_glass",""},
 			{"moreblocks:clean_glass","moreblocks:clean_glass",""},
@@ -89,7 +89,7 @@ if minetest.get_modpath("moreblocks") then
 		sound_open = "minetest_errata_door_coal_glass_open",
 		sound_close = "minetest_errata_door_coal_glass_close",
 		sounds = metal_sounds,
-		groups = { snappy = 2, bendy = 1, cracky = 1, melty = 2, },
+		groups = { snappy = 2, bendy = 1, cracky = 1 },
 		recipe = {
 			{"moreblocks:coal_glass","moreblocks:coal_glass",""},
 			{"moreblocks:coal_glass","moreblocks:coal_glass",""},
@@ -104,7 +104,7 @@ if minetest.get_modpath("moreblocks") then
 		sound_open = "minetest_errata_door_iron_glass_open",
 		sound_close = "minetest_errata_door_iron_glass_close",
 		sounds = metal_sounds,
-		groups = { snappy = 2, bendy = 1, cracky = 1, melty = 2, },
+		groups = { snappy = 2, bendy = 1, cracky = 1 },
 		recipe = {
 			{"moreblocks:iron_glass","moreblocks:iron_glass",""},
 			{"moreblocks:iron_glass","moreblocks:iron_glass",""},
@@ -122,7 +122,7 @@ if minetest.get_modpath("moreblocks") then
 		sound_open = "minetest_errata_door_iron_glass_open",
 		sound_close = "minetest_errata_door_iron_glass_close",
 		sounds = metal_sounds,
-		groups = { snappy = 2, bendy = 1, cracky = 1, melty = 2, },
+		groups = { snappy = 2, bendy = 1, cracky = 1 },
 		recipe = {
 			{"moreblocks:iron_glass","moreblocks:iron_glass",""},
 			{"moreblocks:iron_glass","moreblocks:iron_glass","default:steel_ingot"},
