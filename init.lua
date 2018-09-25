@@ -14,3 +14,5 @@ dofile(modpath.."/missing_groups.lua")
 dofile(modpath.."/xpanes.lua")
 
 dofile(modpath.."/glass_panes.lua")
+
+dofile(modpath.."/mossy_blocks.lua")
