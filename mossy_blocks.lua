@@ -27,7 +27,7 @@ minetest.register_craft({
 
 if stairs and stairs.mod and stairs.mod == "redo" then
 	
-	stairs.register_all(short_name, node.name,
+	stairs.register_all(node.short_name, node.name,
 		{cracky = 3, stone = 1},
 		{node.tile},
 		node.desc .. " Stair",
@@ -36,7 +36,7 @@ if stairs and stairs.mod and stairs.mod == "redo" then
 	
 elseif minetest.global_exists("stairsplus") then
 	
-	stairsplus:register_all("minetest_errata", short_name, node.name, {
+	stairsplus:register_all("minetest_errata", node.short_name, node.name, {
 		description = node.desc,
 		tiles = {node.tile},
 		groups = {cracky = 3, stone = 1},
@@ -45,7 +45,7 @@ elseif minetest.global_exists("stairsplus") then
 	
 else
 	
-	stairs.register_stair_and_slab(short_name, node.name,
+	stairs.register_stair_and_slab(node.short_name, node.name,
 		{cracky = 3, stone = 1},
 		{node.tile},
 		node.desc .. " Stair",
