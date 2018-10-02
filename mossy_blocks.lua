@@ -5,8 +5,6 @@ local node = {
 	tile = "default_stone.png^minetest_errata_moss_overlay.png",
 }
 
-
-
 minetest.register_node(node.name, {
 	description = node.desc,
 	tiles = {node.tile},
@@ -52,4 +50,58 @@ else
 		node.desc .. " Slab",
 		default.node_sound_wood_defaults())
 	
+end
+
+if minetest.get_modpath("moreblocks") then
+	local node = {
+		name = "minetest_errata:mossy_stone_tile",
+		short_name = "mossy_stone_tile",
+		desc = "Mossy Stone Tile",
+		tile = "moreblocks_stone_tile.png^minetest_errata_moss_overlay.png",
+	}
+
+	minetest.register_node(node.name, {
+		description = node.desc,
+		tiles = {node.tile},
+		groups = {cracky = 3, stone = 1},
+		is_ground_content = false,
+		sounds = default.node_sound_stone_defaults(),
+		drop = node.name,
+	})
+
+	minetest.register_craft({
+		output = node.name,
+		recipe = {{"default:mossycobble", "default:mossycobble"},
+				{"default:mossycobble", "default:mossycobble"}}
+	})
+	
+	if stairs and stairs.mod and stairs.mod == "redo" then
+	
+		stairs.register_all(node.short_name, node.name,
+			{cracky = 3, stone = 1},
+			{node.tile},
+			node.desc .. " Stair",
+			node.desc .. " Slab",
+			default.node_sound_wood_defaults())
+		
+	elseif minetest.global_exists("stairsplus") then
+		
+		stairsplus:register_all("minetest_errata", node.short_name, node.name, {
+			description = node.desc,
+			tiles = {node.tile},
+			groups = {cracky = 3, stone = 1},
+			sounds = default.node_sound_wood_defaults(),
+		})
+		
+	else
+		
+		stairs.register_stair_and_slab(node.short_name, node.name,
+			{cracky = 3, stone = 1},
+			{node.tile},
+			node.desc .. " Stair",
+			node.desc .. " Slab",
+			default.node_sound_wood_defaults())
+		
+	end
+
 end

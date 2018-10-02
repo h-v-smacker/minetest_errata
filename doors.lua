@@ -64,6 +64,24 @@ doors.register("door_obsidian_glass_protected", {
 })
 
 
+doors.register_trapdoor("minetest_errata:trapdoor_glass", {
+	description = "Glass Trapdoor",
+	inventory_image = "minetest_errata_trapdoor_glass.png",
+	wield_image = "minetest_errata_trapdoor_glass.png",
+	tile_front = "minetest_errata_trapdoor_glass.png",
+	tile_side = "minetest_errata_trapdoor_glass_side.png",
+	groups = {cracky = 3, oddly_breakable_by_hand = 3, door = 1},
+	sounds = default.node_sound_glass_defaults(),
+})
+                                                                                 
+minetest.register_craft({
+	output = "minetest_errata:trapdoor_glass 2",
+	recipe = {
+		{"default:glass", "default:glass", "default:stick"},
+		{"default:glass", "default:glass", "default:stick"},
+	}
+})
+
 
 if minetest.get_modpath("moreblocks") then
 	

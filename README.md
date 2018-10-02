@@ -16,6 +16,8 @@ By its nature, the mod is rather intrusive. It will actively try to alter and ov
 * sandstone cobble varieties, with stairs/slabs/microblocks, walls, pkarcs
 * doors from moreblocks glass types (clean, iron, coal)
 * locked glass doors (regular, obsidian, iron glass)
+* glass trapdoors
+* mossy stone and stone tiles
 * double, triple and quadruple glass panes to use with non-square corners
 
 ## Borrowed items
