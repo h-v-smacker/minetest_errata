@@ -1,7 +1,7 @@
 # Minetest Errata
 ## a mod that fixes small errors and omissions in other mods
 
-By its nature, the mod is rather intrusive. It will actively try to alter and override existing node definitions and such.
+By its nature, the mod can be rather intrusive. When needed, it will actively try to alter and override existing node definitions and such.
 
 ### Issues the mod addresses:
 * connectivity of xpanes - adds new groups for materials (e.g. sandstone) and allows panes to connect to them
