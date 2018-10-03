@@ -17,6 +17,7 @@ doors.register("door_wood_bar", {
 doors.register("door_iron_bar", {
 	tiles = {{ name = "minetest_errata_door_iron_bar.png", backface_culling = true }},
 	description = "Iron Bar Door",
+	protected = true,
 	inventory_image = "minetest_errata_door_iron_bar_item.png",
 	sound_open = "minetest_errata_door_iron_bar_open",
 	sound_close = "minetest_errata_door_iron_bar_close",
