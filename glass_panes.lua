@@ -30,6 +30,12 @@ minetest.register_craft({output = "minetest_errata:pane_flat_double",
 	},
 })
 
+minetest.register_craft({output = "xpanes:pane_flat 2",
+	type = "shapeless",
+        recipe ={ "minetest_errata:pane_flat_double" }
+})
+
+
 
 -- Triple pane: top and right part are decorative
 
@@ -63,6 +69,11 @@ minetest.register_craft({output = "minetest_errata:pane_flat_triple",
 	},
 })
 
+minetest.register_craft({output = "xpanes:pane_flat 3",
+        type = "shapeless",
+        recipe ={ "minetest_errata:pane_flat_triple" }
+})
+
 
 -- Quadruple pane: all parts save for bottom left are decorative
 
@@ -93,5 +104,10 @@ minetest.register_craft({output = "minetest_errata:pane_flat_quadruple",
 		{"xpanes:pane_flat","xpanes:pane_flat",},
 		{"xpanes:pane_flat","xpanes:pane_flat",},
 	},
+})
+
+minetest.register_craft({output = "xpanes:pane_flat 4",
+        type = "shapeless",
+        recipe ={ "minetest_errata:pane_flat_quadruple" }
 })
 
