@@ -7,7 +7,7 @@ local cobble_table = {
 for _,node in ipairs(cobble_table) do
 	
 	minetest.register_node("minetest_errata:" .. node.name .. "_cobble", {
-		description = node.desc,
+		description = node.desc .. " Cobble",
 		tiles = {"minetest_errata_" .. node.name .. "_cobble.png"},
 		groups = {cracky = 3, [minetest_errata.prefix .. "sandstone"] = 1},
 		is_ground_content = false,
@@ -32,14 +32,14 @@ for _,node in ipairs(cobble_table) do
 		stairs.register_all(node.name .. "_cobble", "minetest_errata:" .. node.name .. "_cobble",
 			{cracky = 3},
 			{"minetest_errata_" .. node.name .. "_cobble.png"},
-			node.desc .. " Stair",
-			node.desc .. " Slab",
+			node.desc .. " Cobble Stair",
+			node.desc .. " Cobble Slab",
 			default.node_sound_wood_defaults())
 		
 	elseif minetest.global_exists("stairsplus") then
 		
 		stairsplus:register_all("minetest_errata", node.name .. "_cobble", "minetest_errata:" .. node.name .. "_cobble", {
-			description = node.desc,
+			description = node.desc .. " Cobble",
 			tiles = {"minetest_errata_" .. node.name .. "_cobble.png"},
 			groups = {cracky = 3},
 			sounds = default.node_sound_wood_defaults(),
@@ -50,8 +50,8 @@ for _,node in ipairs(cobble_table) do
 		stairs.register_stair_and_slab(node.name .. "_cobble", "minetest_errata:" .. node.name .. "_cobble",
 			{cracky = 3},
 			{"minetest_errata_" .. node.name .. "_cobble.png"},
-			node.desc .. " Stair",
-			node.desc .. " Slab",
+			node.desc .. " Cobble Stair",
+			node.desc .. " Cobble Slab",
 			default.node_sound_wood_defaults())
 		
 	end

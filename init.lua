@@ -16,3 +16,5 @@ dofile(modpath.."/xpanes.lua")
 dofile(modpath.."/glass_panes.lua")
 
 dofile(modpath.."/mossy_blocks.lua")
+
+dofile(modpath.."/shelves.lua")

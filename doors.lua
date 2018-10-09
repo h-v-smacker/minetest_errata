@@ -1,5 +1,17 @@
 
 
+doors.register("door_wood_solid", {
+		tiles = {{ name = "minetest_errata_door_wood_solid.png", backface_culling = true }},
+		description = "Solid Wooden Door",
+		inventory_image = "minetest_errata_door_wood_solid_item.png",
+		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+		recipe = {
+			{"group:wood", "group:wood"},
+			{"group:wood", "group:wood"},
+			{"group:wood", "group:wood"},
+		}
+})
+
 doors.register("door_wood_bar", {
 	tiles = {{ name = "minetest_errata_door_wood_bar.png", backface_culling = true }},
 	description = "Wooden Bar Door",
