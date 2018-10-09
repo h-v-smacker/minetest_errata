@@ -6,9 +6,8 @@ doors.register("door_wood_solid", {
 		inventory_image = "minetest_errata_door_wood_solid_item.png",
 		groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		recipe = {
-			{"group:wood", "group:wood"},
-			{"group:wood", "group:wood"},
-			{"group:wood", "group:wood"},
+			{"doors:door_wood"},
+			{"group:wood"},
 		}
 })
 
