@@ -11,6 +11,23 @@ doors.register("door_wood_solid", {
 		}
 })
 
+
+doors.register("door_steel_solid", {
+		tiles = {{name = "minetest_errata_door_steel_solid.png", backface_culling = true}},
+		description = "Solid Steel Door",
+		inventory_image = "minetest_errata_door_steel_solid_item.png",
+		protected = true,
+		groups = {cracky = 1, level = 2},
+		sounds = default.node_sound_metal_defaults(),
+		sound_open = "doors_steel_door_open",
+		sound_close = "doors_steel_door_close",
+		recipe = {
+			{"doors:door_steel"},
+			{"default:steel_ingot"},
+		}
+})
+
+
 doors.register("door_wood_bar", {
 	tiles = {{ name = "minetest_errata_door_wood_bar.png", backface_culling = true }},
 	description = "Wooden Bar Door",
