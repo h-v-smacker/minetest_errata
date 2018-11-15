@@ -34,7 +34,7 @@ for _,node in ipairs(cobble_table) do
 			{"minetest_errata_" .. node.name .. "_cobble.png"},
 			node.desc .. " Cobble Stair",
 			node.desc .. " Cobble Slab",
-			default.node_sound_wood_defaults())
+			default.node_sound_stone_defaults())
 		
 	elseif minetest.global_exists("stairsplus") then
 		
@@ -42,7 +42,7 @@ for _,node in ipairs(cobble_table) do
 			description = node.desc .. " Cobble",
 			tiles = {"minetest_errata_" .. node.name .. "_cobble.png"},
 			groups = {cracky = 3},
-			sounds = default.node_sound_wood_defaults(),
+			sounds = default.node_sound_stone_defaults(),
 		})
 		
 	else
@@ -52,7 +52,7 @@ for _,node in ipairs(cobble_table) do
 			{"minetest_errata_" .. node.name .. "_cobble.png"},
 			node.desc .. " Cobble Stair",
 			node.desc .. " Cobble Slab",
-			default.node_sound_wood_defaults())
+			default.node_sound_stone_defaults())
 		
 	end
 	

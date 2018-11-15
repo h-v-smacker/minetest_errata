@@ -28,3 +28,4 @@ This mod can borrow some items from other mods (in cases where the whole mod see
     * paper walls and wooden bars
     * steel bar and wooden bar doors
     * sandstone cobble varieties
+    * flint block

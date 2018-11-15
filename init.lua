@@ -9,6 +9,8 @@ dofile(modpath.."/doors.lua")
 
 dofile(modpath.."/sandstone_cobble.lua")
 
+dofile(modpath.."/flint_block.lua")
+
 dofile(modpath.."/missing_groups.lua")
 
 dofile(modpath.."/xpanes.lua")
