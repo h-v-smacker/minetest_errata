@@ -57,6 +57,7 @@ doors.register("door_iron_bar", {
 	}
 })
 
+
 -- Protected glass doors
 
 doors.register("door_glass_protected", {
@@ -177,4 +178,10 @@ if minetest.get_modpath("moreblocks") then
 		}
 	})
 	
+end
+
+-- Mesecons compatibility
+
+if minetest.get_modpath("mesecons") then
+	dofile(minetest_errata.modpath.."/doors_mesecons.lua")
 end
