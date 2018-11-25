@@ -19,3 +19,5 @@ dofile(minetest_errata.modpath.."/glass_panes.lua")
 dofile(minetest_errata.modpath.."/mossy_blocks.lua")
 
 dofile(minetest_errata.modpath.."/shelves.lua")
+
+dofile(minetest_errata.modpath.."/chat_commands.lua")
