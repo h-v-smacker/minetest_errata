@@ -1,10 +1,12 @@
+minetest_errata.stats = {
+	n = "pending recount...",
+	c = "pending recount...",
+	t = "pending recount...",
+	e = "pending recount..."
+}
 
-minetest.register_chatcommand("showmewhatyougot", {
-	params = "",
-	description = "Number of registered nodes etc",
-	privs = { shout = true },
-	func = function( name )
-
+minetest.after(30, 
+	function()
 		local n = {}
 		n.n = 0
 		for _,i in pairs(minetest.registered_nodes) do
@@ -26,15 +28,26 @@ minetest.register_chatcommand("showmewhatyougot", {
 			n.e = n.e + 1
 		end
 
+		minetest_errata.stats = n
+	end
+)
+
+-- show the stats on registered nodes and suchlike
+minetest.register_chatcommand("showmewhatyougot", {
+	params = "",
+	description = "Number of registered nodes etc",
+	privs = { shout = true },
+	func = function( name )
 		minetest.chat_send_player(name,
-						"Registered nodes: " .. tostring(n.n) .. "\n" ..
-						"Registered craftitems: " .. tostring(n.c) .. "\n" ..
-						"Registered tools: " .. tostring(n.t) .. "\n" ..
-						"Registered entities: " .. tostring(n.e) .. "\n")
+						"Registered nodes: " .. tostring(minetest_errata.stats.n) .. "\n" ..
+						"Registered craftitems: " .. tostring(minetest_errata.stats.c) .. "\n" ..
+						"Registered tools: " .. tostring(minetest_errata.stats.t) .. "\n" ..
+						"Registered entities: " .. tostring(minetest_errata.stats.e) .. "\n")
 		return true
 	end,
 })
 
+-- provide coordinated in teleport-ready format
 minetest.register_chatcommand("whereami", {
 	params = "",
 	description = "Get current position, adjusted for teleporting",
