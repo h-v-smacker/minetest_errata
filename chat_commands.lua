@@ -34,11 +34,11 @@ minetest.after(30,
 		n.a = 0
 		n.abms = {}
 		for _,i in pairs(minetest.registered_abms) do
-			n.a = n.a + 1
+-- 			n.a = n.a + 1
 			local l = i.label or "no label"
 			table.insert(n.abms, {l, i.interval, i.chance, i.nodenames})
 		end
--- 		n.a = #n.abms
+		n.a = #n.abms
               
 		n.g = 0
 		for _,i in pairs(minetest.registered_globalsteps) do
