@@ -5,7 +5,9 @@ minetest_errata.stats = {
 	e = "pending recount...",
 	a = "pending recount...",
 	g = "pending recount...",
+	l = "pending recount...",
 	abms = {},
+	lbms = {},
 }
 
 minetest.after(30, 
@@ -34,15 +36,22 @@ minetest.after(30,
 		n.a = 0
 		n.abms = {}
 		for _,i in pairs(minetest.registered_abms) do
--- 			n.a = n.a + 1
+			n.a = n.a + 1
 			local l = i.label or "no label"
 			table.insert(n.abms, {l, i.interval, i.chance, i.nodenames})
 		end
-		n.a = #n.abms
               
 		n.g = 0
 		for _,i in pairs(minetest.registered_globalsteps) do
 			n.g = n.g + 1
+		end
+              
+		n.l = 0
+		n.lbms = {}
+		for _,i in pairs(minetest.registered_lbms) do
+			n.l = n.l + 1
+			local l = i.name or "no name"
+			table.insert(n.lbms, {l, i.run_at_every_load, i.nodenames})
 		end
               
 		minetest_errata.stats = n
@@ -61,6 +70,7 @@ minetest.register_chatcommand("showmewhatyougot", {
 						"Registered tools: " .. tostring(minetest_errata.stats.t) .. "\n" ..
 						"Registered entities: " .. tostring(minetest_errata.stats.e) .. "\n" ..
 						"Registered ABMs: " .. tostring(minetest_errata.stats.a) .. "\n" ..
+						"Registered LBMs: " .. tostring(minetest_errata.stats.l) .. "\n" ..
 						"Registered globalsteps: " .. tostring(minetest_errata.stats.g) .. "\n"
                                      )
 		return true
@@ -75,6 +85,27 @@ minetest.register_chatcommand("showmewhatyougot_abms", {
 		
 		for _,l in ipairs(minetest_errata.stats.abms) do
 			minetest.chat_send_player(name, l[1] .. " - " .. l[2] .. " (" .. l[3] .. ") - " .. table.concat(l[4], ", "))
+		end
+                                                       
+		return true
+	end,
+})
+
+minetest.register_chatcommand("showmewhatyougot_lbms", {
+	params = "",
+	description = "Detailed stats on lbms",
+	privs = { shout = true },
+	func = function( name )
+		
+		for _,l in ipairs(minetest_errata.stats.lbms) do
+			local n = ""
+			if type(l[3]) == "string" then
+				n = l[3]
+			else
+				n = table.concat(l[3], ", ")
+			end
+			local f = l[2] or "x"
+			minetest.chat_send_player(name, l[1] .. " - " .. tostring(f) .. " - " .. n)
 		end
                                                        
 		return true
